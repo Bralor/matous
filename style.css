@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
 body {
-  padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-content: center;
   min-height: 100vh;
   height: 100vh;
   font-family: 'Roboto Mono', monospace;
@@ -24,6 +21,27 @@ li {
 	font-size: 20px;
 }
 
+.link, a, a:visited {
+	color: #00ff99;
+}
+
+.link-button {
+    border: 2px solid #00ff90;
+    padding: 0.15em 0.4em;
+    margin: 0.3em 0.6em 0.3em 0;
+    color: #00ff90;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.link-button:hover {
+    border: 2px solid #00ff90;
+    padding: 0.15em 0.4em;
+    background-color: #00ff90;
+    color: white;
+}
+
 #check {
 	border: solid;
 }
@@ -34,25 +52,31 @@ li {
 
 .toggleDark,
 .toggleLight{
+  color: #00ff90;
+  left: 2em;
+  display: inline-block;
+  padding: 0.15em 0.4em;
+  margin: 0.3em 0.6em 0.3em 0;
   cursor: pointer;
   position: absolute;
   z-index: 2;
-  top: 20px;
-  left: 20px;
 }
 
 .toggleDark{
   display: block;
   color: #222;
+  border: 2px solid #222;
 }
 
 .toggleDark:hover{
-  color: blue;
+  color: #00ff90;
+  border: 2px solid #00ff90;
 }
 
 .toggleLight{
   display: none;
   color: white;
+  border: 2px solid white;
 }
 
 #toggleMode:checked ~ .toggleDark{
@@ -71,7 +95,7 @@ li {
   bottom: 0;
   background-color: var(--bg);
   z-index: 1;
-  padding: 50px 20px;
+  padding: 0 2em;
   font-family: 'Roboto Mono', monospace;
   color: var(--panel-title);
 }
